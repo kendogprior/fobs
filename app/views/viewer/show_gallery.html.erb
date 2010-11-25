@@ -1,0 +1,29 @@
+<h1 class ="infohead"><%= "#{@gallery.title} gallery" %> </h1>
+<h4>Click picture to unfold a larger image or click title to open an image in a separate window</h4>
+
+ <% @pictures = @gallery.images.in_groups_of(3) %>
+<%if @pictures.size != 0-%>
+  <table>
+    <%@pictures.each  do |row|-%>
+      <tr>
+        <% row.each do |item| -%>
+          <%if item-%>
+            <td>
+              <div class ="pic"><%#=  image_tag(item.photo.url(:medium))%>
+              <%= lightbox_image_tag(item.photo.url(:thumb), item.photo.url(:medium),{:class => "images"},  :title => item.title) %>
+            
+                
+                <p><%= link_to item.title,item.photo.url(:medium), {:popup => [item.title, 'height=500, width = 600'],:title => 'Click for a pop-up window'} %></p>
+              </div>
+            </td>
+          <%else-%>
+            <td></td>
+          <%end-%>
+        <%end-%>
+      </tr>
+    <%end-%>
+  </table>
+<%else-%>
+  <div class ="noimages">Sorry - picture gallery is empty at the moment</div>
+<%end-%>
+<%end%> 

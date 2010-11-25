@@ -1,0 +1,42 @@
+ 
+<div id="treeview">
+	          <%= menuhelper(tree, nil, false) { |node| node.name + "(order: #{node.pageorder})"}.html_safe %> 
+</div>
+
+
+
+
+<%= form_for(@page, :html => { :multipart => true }) do |f| %> 
+	
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :parent_id %><br />
+<%= f.collection_select :parent_id, Page.all(:order => "name"), :id, :name, :include_blank => true %> 
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p> 
+	<p>
+    <%= f.label :pageorder %><br />
+    <%= f.text_field :pageorder , :size => '3' %>
+  </p>
+
+  
+  <p>
+    <%= f.label :content %><br />
+		<%= f.cktext_area :content, :toolbar=>'Full', :width=>'850px', :height=>'400px' %> 
+  </p>     
+	<p>
+    <%= f.label :redirect %><br />
+    <%= f.check_box :redirect %>
+  </p> 
+
+			<p>
+  	    <%= f.label :action_name %><br />
+  	    <%= f.text_field :action_name %>
+  	  </p>    
+ 
+  <p><%= f.submit %></p>
+<% end %>
+                            

@@ -1,0 +1,27 @@
+<% title "Image" %>
+
+<p>
+  <strong>Page:</strong>
+  <%= @image.page_id %>
+</p>
+<p>
+  <strong>Gallery:</strong>
+  <%= @image.gallery_id %>
+</p>
+<p>
+  <strong>Title:</strong>
+  <%= @image.title %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= @image.description %>
+</p>
+ <p>
+  <strong>Image:</strong>
+  <%= image_tag @image.photo.url(:thumb) unless !@image.photo_file_name %> 
+</p>
+<p>
+  <%= link_to "Edit", edit_gallery_image_path(@gallery.id,@image) %> |
+  <%= link_to "Destroy", gallery_image_path(@image), :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", gallery_images_path %>
+</p>

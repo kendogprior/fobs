@@ -1,0 +1,12 @@
+<% title "Pages" %>
+
+
+
+  
+
+
+ <%= menuhelper(tree, nil, false) { |node| node.name + "(order: #{node.pageorder})" + "[" + link_to('Show', node) + "  " + link_to('Edit', edit_page_path(node)) + "   " + link_to('Destroy', node, :confirm => 'Are you sure?', :method => :delete) + "]"}.html_safe %>
+
+<p><%= link_to "New Page", new_page_path %></p>
+       
+

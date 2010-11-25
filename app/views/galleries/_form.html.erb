@@ -1,0 +1,12 @@
+<%= form_for @gallery do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :page_id %><br /> 
+    <%= f.collection_select :page_id, Page.all(:order => 'name'), :id, :name, :include_blank =>true %>
+  </p>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

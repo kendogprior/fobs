@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>untitled</title>
+	<meta name="generator" content="TextMate http://macromates.com/">
+	<meta name="author" content="Brian Prior">                          
+	
+ <link rel="stylesheet" href="../../../stylesheets/screen.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<%= stylesheet_link_tag  "superfish-navbar", "superfish" ,:cache => 'base'%>
+	<%= javascript_include_tag 'jquery-1.2.6.min', 'jquery.hoverIntent.minified', 'superfish'%>
+	 <script type="text/javascript"> 
+	// initialise plugins
+	jQuery(function(){
+		jQuery('ul.sf-menu').superfish({
+			pathClass: 'current', speed: 'fast'
+			});  
+	});  
+	</script>
+<!--[if lt IE 8]>    
+	<link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+<![endif]-->        
+	 
+	<!-- Date: 2010-10-26 -->
+</head>
+<body id = "bp">    
+
+ <div id = "navigation"> <%= display_tree_recursive(Page.tree, nil,x = false) { |node| link_to(node.name, pageshow_path(node.name))}.html_safe %>   
+	</div> 
+	   
+
+	<%= yield %>
+	
+
+</body>
+</html>

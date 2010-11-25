@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<title>
+			O.R.P Błyskawica Society -<%= content_for?(:title) ? yield(:title) : "" %>
+		</title><%= stylesheet_link_tag  "screen", "superfish-navbar", "superfish",'jquery.lightbox-0.5', :cache => 'base'%><%= javascript_include_tag 'jquery-1.2.6.min', 'jquery.hoverIntent.minified', 'superfish','jquery.lightbox-0.5'%>
+		<script type="text/javascript">
+//<![CDATA[
+			// initialise plugins
+			jQuery(function(){
+				jQuery('ul.sf-menu').superfish({
+					pathClass: 'current', speed: 'fast'
+					});  
+			});  
+		//]]>
+		</script><!--[if lt IE 8]>    
+			<link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<![endif]-->
+	</head>
+	<body id="bp">
+		<div id="container" class= "shadow">
+			<div id="headbox">
+				<div id="header">
+					<h1>
+						Friends of the<br>
+						O.R.P. Błyskawica<br>
+						Society
+					</h1><img id="badge" src="/images/badge.png" width="75" height="80" alt="Badge" name="badge">
+				</div>
+				<div id="navigation">
+					<%= display_tree_recursive(Page.tree, nil, x = false) { |node| link_to(node.name, pageshow_path(node.name))}.html_safe %>
+					<div style="clear:both; height:0">
+						&nbsp;
+					</div>
+				</div>
+			</div>
+			<div id="middlewrapper">
+				<%= yield %>
+				<div style="clear:both; height:0">
+					&nbsp;
+				</div>
+			</div>
+			<div id="footer">
+				Navigation and other details
+			</div>
+		</div>
+		<div id = "bs">&nbsp;</div>
+	</body>
+</html>

@@ -1,0 +1,11 @@
+
+
+<h1> <% title @page.name %>  </h1> 
+<div style = "clear:both">&nbsp;</div>
+ <%= @page.content.html_safe %> 
+
+<p>
+  <%= link_to "Edit", edit_page_path(@page) %> |
+  <%= link_to "Destroy", @page, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", pages_path %>
+</p>

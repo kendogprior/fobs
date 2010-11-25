@@ -1,0 +1,384 @@
+
+--- 
+pages: 
+  columns: 
+  - id
+  - parent_id
+  - name
+  - content
+  - created_at
+  - updated_at
+  - image_file_name
+  - image_content_type
+  - image_file_size
+  - image_updated_at
+  - redirect
+  - action_name
+  - controller_name
+  - pageorder
+  records: 
+  - - 1
+    - 
+    - Home
+    - |
+      <div id="oneortwo">
+      	<p>
+      		<img src="/ckeditor_assets/pictures/3/content_draft3rev.png" style="margin-right: 10px; float: left; width: 100px; height: 100px;" /></p>
+      	<h2>
+      		The SHIP herself</h2>
+      	<p>
+      		Right click the image place-holder and select image properties to add an image or delete this one if you do not need the image. Replace this and other text as you wish. If you type the RETURN key you will automatically create a new paragraph. If all you need is a new-line then type SHIFT + RETURN .<br />
+      		<br />
+      		It will help you a lot if you click the &quot;Show blocks&quot; button in the penultimate section and last row of the toolbar, next to the question mark button.<br />
+      		<br />
+      		Highlight all of this text to delete or replacce with your own</p>
+      </div>
+      <div id="sidebar">
+      	<p>
+      		Sidebar content</p>
+      </div>
+
+    - 2010-10-10 16:29:26.828511
+    - 2010-11-10 11:34:05.803940
+    - 
+    - 
+    - 
+    - 
+    - false
+    - ""
+    - ""
+    - 1
+  - - 2
+    - 
+    - History
+    - |
+      <div id="oneortwo">
+      	<p>
+      		<img src="/ckeditor_assets/pictures/2/content_bigmog1.JPG" style="margin-right: 10px; float: left; width: 100px; height: 100px;" />Type the title here</p>
+      	<p>
+      		Right click the image place-holder and select image properties to add an image or delete this one if you do not need the image. Replace this and other text as you wish. If you type the RETURN key you will automatically create a new paragraph. If all you need is a new-line then type SHIFT + RETURN .<br />
+      		<br />
+      		It will help you a lot if you click the &quot;Show blocks&quot; button in the penultimate section and last row of the toolbar, next to the question mark button.<br />
+      		<br />
+      		Highlight all of this text to delete or replacce with your own</p>
+      </div>
+      <div id="sidebar">
+      	<p>
+      		Sidebar content</p>
+      </div>
+
+    - 2010-10-10 16:29:52.655933
+    - 2010-11-10 11:30:45.904156
+    - 
+    - 
+    - 
+    - 
+    - false
+    - ""
+    - ""
+    - 10
+  - - 3
+    - 
+    - Events
+    - |
+      <div id="content">
+      	<h2>
+      		<img align="center" src="/ckeditor_assets/pictures/1/content_be5f0cb5f55da010d80e6a7067008b18.jpg" style="margin-right: 10px; width: 120px; height: 100px;" /><span style="font-size: 16px;"><strong>Launch of Soyez</strong></span></h2>
+      	<p>
+      		Right click the image place-holder and select image properties to add an image or delete this one if you do not need the image. Replace this and other text as you wish. If you type the return key you will automatically create a new paragraph. If all you need is a new-line then type SHIFT + RETURN .<br />
+      		<br />
+      		It will help you a lot if you click the &quot;Show blocks&quot; button in the penultimate section and last row of the toolbar, next to the question mark button.<br />
+      		<br />
+      		Highlight all of this text to delete or replacce with your own</p>
+      </div>
+
+    - 2010-10-10 16:30:07.300076
+    - 2010-11-07 10:00:22.404772
+    - 
+    - 
+    - 
+    - 
+    - false
+    - ""
+    - ""
+    - 5
+  - - 14
+    - 
+    - Site map
+    - ""
+    - 2010-10-29 13:01:02.120030
+    - 2010-11-02 16:17:23.457469
+    - 
+    - 
+    - 
+    - 
+    - true
+    - sitemap
+    - ""
+    - 8
+  - - 19
+    - 2
+    - Test1
+    - |
+      <br />
+
+    - 2010-11-01 16:37:18.265474
+    - 2010-11-01 16:38:07.971249
+    - 
+    - 
+    - 
+    - 
+    - false
+    - ""
+    - ""
+    - 1
+  - - 20
+    - 2
+    - Test2
+    - |
+      <br />
+
+    - 2010-11-01 16:37:39.522817
+    - 2010-11-01 16:37:39.522817
+    - 
+    - 
+    - 
+    - 
+    - false
+    - ""
+    - ""
+    - 2
+  - - 21
+    - 
+    - Slides
+    - ""
+    - 2010-11-01 21:47:15.787143
+    - 2010-11-01 21:47:15.787143
+    - 
+    - 
+    - 
+    - 
+    - true
+    - slideshow
+    - viewer
+    - 40
+  - - 22
+    - 
+    - Contact Friends
+    - |
+      <br />
+
+    - 2010-11-08 14:57:27.500604
+    - 2010-11-08 14:59:12.109170
+    - 
+    - 
+    - 
+    - 
+    - true
+    - contacts
+    - 
+    - 45
+
+--- 
+users: 
+  columns: 
+  - id
+  - email
+  - encrypted_password
+  - password_salt
+  - reset_password_token
+  - remember_token
+  - remember_created_at
+  - sign_in_count
+  - current_sign_in_at
+  - last_sign_in_at
+  - current_sign_in_ip
+  - last_sign_in_ip
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - brian@kendog.freeserve.co.uk
+    - $2a$10$GrPwCkQZNvv.E2n0KT37uOJTeyqFQwdq2qhm77sh5dpLyCbmf/GE6
+    - $2a$10$GrPwCkQZNvv.E2n0KT37uO
+    - 2QEf9RUXGHpNsjJL0Q_m
+    - 
+    - 
+    - 16
+    - 2010-11-07 12:11:27.377846
+    - 2010-11-06 19:18:07.805289
+    - 127.0.0.1
+    - 127.0.0.1
+    - 2010-10-15 13:57:11.025305
+    - 2010-11-07 12:11:27.378378
+
+--- 
+galleries: 
+  columns: 
+  - id
+  - page_id
+  - title
+  - created_at
+  - updated_at
+  records: 
+  - - 2
+    - 19
+    - Shipping gallery
+    - 2010-11-02 17:54:55.147693
+    - 2010-11-02 20:03:11.731458
+
+--- 
+images: 
+  columns: 
+  - id
+  - page_id
+  - gallery_id
+  - title
+  - description
+  - created_at
+  - updated_at
+  - photo_file_name
+  - photo_content_type
+  - photo_file_size
+  - photo_updated_at
+  records: 
+  - - 26
+    - 
+    - 2
+    - Blyskawica at anchor
+    - Blyskawica at anchor somewhere
+    - 2010-11-02 20:12:01.790175
+    - 2010-11-04 14:55:17.635658
+    - 100_1320.jpg
+    - image/jpeg
+    - 547296
+    - 2010-11-04 14:52:53.028641
+  - - 27
+    - 
+    - 2
+    - Snow in Jan
+    - Gordon Road, WInter 2010
+    - 2010-11-02 20:13:12.206685
+    - 2010-11-04 14:56:40.593640
+    - IMG_3167.JPG
+    - image/jpeg
+    - 2582190
+    - 2010-11-04 14:56:38.523476
+
+--- 
+ckeditor_assets: 
+  columns: 
+  - id
+  - data_file_name
+  - data_content_type
+  - data_file_size
+  - assetable_id
+  - assetable_type
+  - type
+  - guid
+  - locale
+  - user_id
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - be5f0cb5f55da010d80e6a7067008b18.jpg
+    - image/jpeg
+    - 122104
+    - 
+    - 
+    - Ckeditor::Picture
+    - 
+    - 0
+    - 1
+    - 2010-10-23 10:56:31.454896
+    - 2010-10-23 10:56:31.454896
+  - - 2
+    - bigmog1.JPG
+    - image/jpeg
+    - 677366
+    - 
+    - 
+    - Ckeditor::Picture
+    - 
+    - 0
+    - 
+    - 2010-10-23 14:11:03.670984
+    - 2010-10-23 14:11:03.670984
+  - - 3
+    - draft3rev.png
+    - image/png
+    - 168383
+    - 
+    - 
+    - Ckeditor::Picture
+    - 
+    - 0
+    - 
+    - 2010-10-29 10:02:15.044979
+    - 2010-10-29 10:02:15.044979
+
+--- 
+contacts: 
+  columns: 
+  - id
+  - name
+  - email
+  - telephone
+  - message
+  - created_at
+  - updated_at
+  records: 
+  - - 14
+    - Brian Prior
+    - brian@kendog.freeserve.co.uk
+    - ""
+    - Waht the fuck is happening?
+    - 2010-11-09 16:15:55.911570
+    - 2010-11-09 16:15:55.911570
+  - - 15
+    - Brian Prior
+    - brian@kendog.freeserve.co.uk
+    - ""
+    - Lots of words ....
+    - 2010-11-09 16:26:54.763501
+    - 2010-11-09 16:26:54.763501
+  - - 16
+    - Brian Prior
+    - brian@kendog.freeserve.co.uk
+    - ""
+    - Another try ...
+    - 2010-11-09 16:38:59.492143
+    - 2010-11-09 16:38:59.492143
+  - - 17
+    - Brian Prior
+    - brian@kendog.freeserve.co.uk
+    - ""
+    - dsvdsdsdsdsf
+    - 2010-11-09 16:40:42.488023
+    - 2010-11-09 16:40:42.488023
+  - - 18
+    - Brian Prior
+    - brian@kendog.freeserve.co.uk
+    - ""
+    - dsvsddsf
+    - 2010-11-09 16:41:40.308458
+    - 2010-11-09 16:41:40.308458
+  - - 19
+    - Brian Prior
+    - brian@kendog.freeserve.co.uk
+    - ""
+    - df sdf sdf sds f
+    - 2010-11-09 16:46:17.969184
+    - 2010-11-09 16:46:17.969184
+  - - 20
+    - Brian Prior
+    - brian@kendog.freeserve.co.uk
+    - 01983 527136
+    - |-
+      This is a test message for the FOBS site.
+      If you receive this with a 'fancy page' would you let me know. 
+      
+      It's all rather confusing really!
+    - 2010-11-09 16:51:59.524865
+    - 2010-11-09 16:51:59.524865

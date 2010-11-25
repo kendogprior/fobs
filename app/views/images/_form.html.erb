@@ -1,0 +1,15 @@
+<%= form_for([@gallery, @image] , :html => { :multipart => true }) do |f| %>
+  <%= f.error_messages %>  
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </p>     
+ 	  <p>
+	  <%= label_tag :photo, "Select image from file system" %><br />
+	<%=   f.file_field :photo%></p>
+  <p><%= f.submit %></p>
+<% end %>

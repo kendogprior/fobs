@@ -1,0 +1,49 @@
+<div id = "content">
+	<h3 class = "form">
+Please use this form to contact the Friends of the<br />
+						O.R.P. Błyskawica<br />
+						Society    
+</h3>
+<p> The fields marked <span class="red">*</span> are required fields<p>
+
+<%= form_for(@contact) do |f| %>
+  <% if @contact.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+
+      <ul>
+      <% @contact.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %><span class="red">*</span> 
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %><span class="red">*</span> 
+  </div>
+  <div class="field">
+    <%= f.label :telephone %><br />
+    <%= f.text_field :telephone %>
+  </div>
+  <div class="field">
+    <%= f.label :message %><br />
+    <%= f.text_area :message %><span class="red">*</span> 
+  </div>  
+
+<p>   
+   	 <% @check = checkuser %>  
+	 Please input the following letters in reverse order: <span class = "code"><%= @check[0] %></span><br/>
+	 <input name ="showword" maxlength="6"/><span class="red">*</span><% if !@ok%><span style="color: red">Incorrect or missing characters</span><%end%>
+  <input name ="required" type ="hidden" value="<%= @check[1] %>"/>  </p>
+  <div class="actions">
+    <%= f.submit "Send message"  %>
+  </div>
+<% end %>
+<br/><br/> <br/>
+  </div>
