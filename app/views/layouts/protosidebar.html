@@ -3,8 +3,9 @@
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 		<title>
-			O.R.P Błyskawica Society -<%= content_for?(:title) ? yield(:title) : "" %>
-		</title><%= stylesheet_link_tag  "screen", "superfish-navbar", "superfish",'jquery.lightbox-0.5', :cache => 'base'%><%= javascript_include_tag 'jquery-1.2.6.min', 'jquery.hoverIntent.minified', 'superfish','jquery.lightbox-0.5'%>
+			O.R.P Błyskawica Society - <%= @pagetitle%>
+		</title><%= stylesheet_link_tag  "screen", "superfish-navbar", "superfish",'jquery.lightbox-0.5', :cache => 'base'%>
+		<%= javascript_include_tag 'jquery-1.2.6.min', 'jquery.hoverIntent.minified', 'superfish','jquery.lightbox-0.5'%>
 		<script type="text/javascript">
 //<![CDATA[
 			// initialise plugins
