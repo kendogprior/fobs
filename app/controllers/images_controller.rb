@@ -2,44 +2,38 @@ class ImagesController < ApplicationController
 	
       layout "admin" 
   def index 
- 
-	   
-	  	@gallery = Gallery.find(params[:gallery_id])
-    @images = @gallery.images
-	  @gallery_title = @gallery.title
+		@images = Image.find(:all)
   end
   
   def show         
-	   	@gallery = Gallery.find(params[:gallery_id])
-    @image = @gallery.images.find(params[:id])
+
+    @image = Image.find(params[:id])
 		#@gallery_id = @image.gallery_id
   end
   
   def new 
-	 	@gallery = Gallery.find(params[:gallery_id])
-    @image = @gallery.images.new 
-    @gallery
+
+    @image = Image.new 
   end
   
   def create 
-	 	@gallery = Gallery.find(params[:gallery_id])
-    @image = @gallery.images.new(params[:image])
+
+    @image = Image.new(params[:image])
     if @image.save
       flash[:notice] = "Successfully created image."   
       
-      redirect_to(gallery_images_url(@gallery.id, @image))
+      redirect_to(images_url(@image))
     else
       render :action => 'new'
     end
   end
   
   def edit
-	 	@gallery = Gallery.find(params[:gallery_id])
+
     @image = Image.find(params[:id])
   end
   
   def update
-	 	@gallery = Gallery.find(params[:gallery_id])
     @image = Image.find(params[:id])
     if @image.update_attributes(params[:image])
       flash[:notice] = "Successfully updated image."
@@ -50,11 +44,10 @@ class ImagesController < ApplicationController
   end
   
   def destroy
-	 	@gallery = Gallery.find(params[:gallery_id])
     @image = Image.find(params[:id])
     @image.destroy
     flash[:notice] = "Successfully destroyed image."
-    redirect_to(gallery_images_url(@gallery.id))
+    redirect_to(images_url)
   end     
 
 

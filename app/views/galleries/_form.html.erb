@@ -8,5 +8,20 @@
     <%= f.label :title %><br />
     <%= f.text_field :title %>
   </p>
+	<ul>
+	 <% @images.each do |image| %>
+   <li>  
+	     <% @checked = image.galleries.include? @gallery %> 
+   		<div class = "GalleryImages <%= 'redborder' if @checked %>">
+			<%= image_tag image.photo.url(:thumb) unless !image.photo_file_name %><br/> 
+				<%= image.title %> 
+			<%= check_box_tag 'image_ids[]', image.id, (@gallery.images.include? image) %> 	
+			</div>
+
+   </li>
+<%- end -%> 
+
+  </ul>
+    		<div class="clear">&nbsp;</div>
   <p><%= f.submit %></p>
 <% end %>

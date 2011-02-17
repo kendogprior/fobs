@@ -13,4 +13,19 @@
   <%= link_to "Edit", edit_gallery_path(@gallery) %> |
   <%= link_to "Destroy", @gallery, :confirm => 'Are you sure?', :method => :delete %> |
   <%= link_to "View All", galleries_path %>
-</p>
+</p> 
+
+<ul class = "imagelist">
+ <% @images.each do |image| %>
+ <li>  
+     <% @checked = image.galleries.include? @gallery %> 
+ 		<div class = "GalleryImages <%= 'redborder' if @checked %>">
+		<%= image_tag image.photo.url(:thumb) unless !image.photo_file_name %><br/> 
+			<%= image.title %> 
+		</div>
+
+ </li>
+<%- end -%>  
+<div class="clear">&nbsp;</div>  
+
+</ul>

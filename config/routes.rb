@@ -7,9 +7,10 @@ Fobs::Application.routes.draw do
 
   #get "viewer/show"
 
-  resources :galleries do
-     resources :images 
- 	end
+  resources :galleries 
+  resources :images 
+   match 'admin/gallery_images/(:id)' => 'galleries#edit_images', :as => :edit_gallery_images
+
  
   devise_for :users
 

@@ -73,12 +73,23 @@ a {
 .error_messages ul {
   margin: 0;
 }    
-/*
-#menu { list-style: none; margin: 0,0,2em,0; padding: 0; float: left; width: 100%; }
-#menu li { margin: 0 2px; padding: 0; float: left; }
-#menu li a { display: block; padding: 4px 8px; text-decoration: none; border: solid 1px black; color: black; background-color: #AEBBE2; }
-#menu li a:hover { color: white; background-color: #4A63B8; }
-*/
+#container form ul li{
+	float:left;
+	position:relative;	
+	border:1px sold black;
+	margin:5px;
+	padding:5px;
+	list-style:none;
+}
+
+.imagelist li{
+float:left;
+position:relative;	
+border:1px sold black;
+margin:5px;
+padding:5px;
+list-style:none;
+}
 #submenu { float: left; list-style: none; border: solid 1px black; padding: 15px 14px; margin: 0 20px 0 0; }
 
 #treeview{border:1px solid blue; padding:4px; width:25%;} 

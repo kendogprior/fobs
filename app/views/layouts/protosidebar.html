@@ -22,20 +22,24 @@
 	<body id="bp">
 		<div id="container" class= "shadow">
 			<div id="headbox">
-				<div id="header">
+			 
+			 <div id="header">
 					<h1>
 						Friends of the<br>
 						O.R.P. Błyskawica<br>
 						Society
 					</h1><img id="badge" src="/images/badge.png" width="75" height="80" alt="Badge" name="badge">
-				</div>
+				</div>  
+				<% cache("topmenu") do %>
 				<div id="navigation">
 					<%= display_tree_recursive(Page.tree, nil, x = false) { |node| link_to(node.name, pageshow_path(node.name))}.html_safe %>
 					<div style="clear:both; height:0">
 						&nbsp;
-					</div>
+					</div> 
+					<% end %> 
 				</div>
 			</div>
+	 
 			<div id="middlewrapper">
 				<%= yield %>
 				<div style="clear:both; height:0">

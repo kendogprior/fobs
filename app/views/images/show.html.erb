@@ -21,7 +21,7 @@
   <%= image_tag @image.photo.url(:thumb) unless !@image.photo_file_name %> 
 </p>
 <p>
-  <%= link_to "Edit", edit_gallery_image_path(@gallery.id,@image) %> |
-  <%= link_to "Destroy", gallery_image_path(@image), :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", gallery_images_path %>
+  <%= link_to "Edit", edit_image_path(@image) %> |
+  <%= link_to "Destroy", image_path(@image), :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", images_path %>
 </p>

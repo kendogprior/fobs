@@ -32,19 +32,8 @@
 
 			<ul    id='topmenu' class='sf-menu'>
 				<li><%= link_to("Pages admin", pages_path) %></li> 
-				<li><%= link_to("Galleries admin", galleries_path) unless !Page.first %></li>
-				<li>
-					<a href = "#">Gallery Images</a>
-					<ul>  
-			  		<% if Gallery.first %>
-			  			<% Gallery.all.each do |gallery| %> 
-			 					<li> 
-										<%= link_to("#{gallery.title}", admin_images_path(gallery)) %>
-							  </li>
-			       <% end %>
-			      <% end %>
-			   </ul>
-			  </li>  
+				<li><%= link_to("Galleries admin", galleries_path) unless !Page.first %></li>  
+				<li><%= link_to("Images admin", images_path) unless !Page.first %></li> 
 			 <li><%= link_to("Contacts page", contact_index_path)%></li>
 			<li><%= link_to("Logout", destroy_user_session_path) %></a></li>
 			</ul>

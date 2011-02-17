@@ -5,15 +5,18 @@ class GalleriesController < ApplicationController
   end
   
   def show
-    @gallery = Gallery.find(params[:id])
+    @gallery = Gallery.find(params[:id])  
+   @images =  @gallery.images   
   end
   
   def new
-    @gallery = Gallery.new
+    @gallery = Gallery.new 
+    @images = Image.find(:all)
   end
   
   def create
-    @gallery = Gallery.new(params[:gallery])
+    @gallery = Gallery.new(params[:gallery]) 
+    @gallery.images = Image.find(params[:image_ids]) if params[:image_ids]
     if @gallery.save
       flash[:notice] = "Successfully created gallery."
       redirect_to @gallery
@@ -23,11 +26,13 @@ class GalleriesController < ApplicationController
   end
   
   def edit
-    @gallery = Gallery.find(params[:id])
+    @gallery = Gallery.find(params[:id]) 
+    @images = Image.find(:all)
   end
   
   def update
-    @gallery = Gallery.find(params[:id])
+    @gallery = Gallery.find(params[:id])   
+      @gallery.images = Image.find(params[:image_ids]) if params[:image_ids]
     if @gallery.update_attributes(params[:gallery])
       flash[:notice] = "Successfully updated gallery."
       redirect_to @gallery

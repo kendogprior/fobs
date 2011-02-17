@@ -10,7 +10,6 @@ gem "nifty-generators"
 gem 'devise'
 gem 'acts_as_tree'
 gem 'paperclip' 
-#gem 'RedCloth' 
 gem 'ckeditor', '3.4.2.pre'
 
 gem 'mysql2'

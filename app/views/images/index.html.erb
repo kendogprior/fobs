@@ -1,25 +1,23 @@
-<% title "Images for #{Gallery.find(params[:gallery_id]).title}" %>
+<% title "Images"%>
 
 <table>
   <tr>
-    <th>Page</th>
-    <th>Gallery</th>
+    
     <th>Title</th>
     <th>Description</th>
     <th>Image thumb</th>
   </tr>
   <% for image in @images %>
     <tr>
-      <td><%= image.page_id %></td>
-      <td><%= image.gallery_id %></td>
+     
       <td><%= image.title %></td>
       <td><%= image.description %></td>
       <td><%= image_tag image.photo.url(:thumb) unless !image.photo_file_name %>  </td>
-      <td><%= link_to "Show", gallery_image_path(@gallery.id,image) %></td>
-      <td><%= link_to "Edit", edit_gallery_image_path(@gallery.id,image) %></td>
-      <td><%= link_to "Destroy", gallery_image_path(@gallery.id,image), :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= link_to "Show", image_path(image) %></td>
+      <td><%= link_to "Edit", edit_image_path(image) %></td>
+      <td><%= link_to "Destroy", image_path(image), :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>
   <% end %>
 </table>
 
-<p><%= link_to "New Image", new_gallery_image_path %></p>
+<p><%= link_to "New Image", new_image_path %></p>

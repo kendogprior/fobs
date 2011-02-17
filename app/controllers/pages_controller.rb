@@ -1,10 +1,10 @@
 class PagesController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user! 
+
+   before_filter :sweep, :only => [:create, :update, :destroy]    
   layout "admin"
   def index
-    #  @pages = Page.order(:pageorder).all
-
-    #@tree = Page.order(:pageorder).find(:all, :include => [ :children ])
+    
   end
 
   def show
@@ -12,7 +12,7 @@ class PagesController < ApplicationController
   end
 
   def new
-    #@tree = Page.order(:pageorder).find(:all, :include => [ :children ])
+   
     @page = Page.new
   end
 
@@ -46,5 +46,11 @@ class PagesController < ApplicationController
     @page.destroy
     flash[:notice] = "Successfully destroyed page."
     redirect_to pages_url
-  end
+  end     
+
+	private
+		def sweep
+			expire_fragment(:topmenu)    
+	    expire_fragment(:sitemap)
+		end
 end
