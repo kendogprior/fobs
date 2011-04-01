@@ -1,5 +1,5 @@
 source 'http://rubygems.org'
-gem 'rails', '3.0.1'
+gem 'rails', '3.0.5'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -7,10 +7,10 @@ gem 'rails', '3.0.1'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem "nifty-generators"
 
-gem 'devise'
+#gem 'authlogic'  
 gem 'acts_as_tree'
 gem 'paperclip' 
-gem 'ckeditor', '3.4.2.pre'
+gem 'ckeditor', '3.5.2'
 
 gem 'mysql2'
 
@@ -38,3 +38,5 @@ gem 'mysql2'
 # group :development, :test do
 #   gem 'webrat'
 # end
+gem "bcrypt-ruby", :require => "bcrypt"
+gem "mocha", :group => :test

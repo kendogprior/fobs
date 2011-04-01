@@ -13,10 +13,7 @@ CKEDITOR.editorConfig = function( config )
   //config.ContextMenu = ['Generic','Anchor','Flash','Select','Textarea','Checkbox','Radio','TextField','HiddenField','ImageButton','Button','BulletedList','NumberedList','Table','Form'] ; 
   
   config.height = '400px';
-  config.width = '600px';  
-  
-
-  //config.enterMode = CKEDITOR.ENTER_BR;
+  config.width = '600px';
   
   //config.resize_enabled = false;
   //config.resize_maxHeight = 2000;
@@ -41,11 +38,6 @@ CKEDITOR.editorConfig = function( config )
         ['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
         ['Link','Unlink','Anchor'],
         ['Image','Embed','Flash','Attachment','Table','HorizontalRule','Smiley','SpecialChar','PageBreak']
-    ]; 
-
-  	config.templates_files = [ '/javascripts/mytemplates.js' ];
-	
-
-
+    ];
 };
 

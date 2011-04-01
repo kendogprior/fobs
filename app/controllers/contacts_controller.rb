@@ -1,10 +1,8 @@
 class ContactsController < ApplicationController
   # GET /contacts
   # GET /contacts.xml   
-  before_filter :authenticate_user!, :except => :new 
+    before_filter :login_required , :except => [:create, :new]            
   layout "protosidebar"
-    
-
 
   def index
     @contacts = Contact.all
@@ -50,7 +48,8 @@ class ContactsController < ApplicationController
     respond_to do |format|
       #if @ok && @contact.save   
       if @contact.save   
-	      UserMailer.forward_email(@contact).deliver
+	        recipient = "brian.on.iow@gmail.com"  
+		      UserMailer.forward_email(@contact,recipient).deliver
         format.html { redirect_to(root_path, :notice => 'Message sent') }        
       else
         format.html { render :action => "new" }

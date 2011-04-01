@@ -1,5 +1,5 @@
 ﻿/*
-Copyright (c) 2003-2010, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2011, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.html or http://ckeditor.com/license
 */
 
@@ -23,20 +23,37 @@ CKEDITOR.addTemplates( 'default',
 						'Type the title here'+
 					'</h3>' +
 					'<p>' +
-						'Type your text here' +
+						'Type the text here' +
 					'</p>'
 			},
 			{
-				title: 'Two column template',
+				title: 'Strange Template',
 				image: 'template2.gif',
 				description: 'A template that defines two colums, each one with a title, and some text.',
 				html:
-					'<div id="content" class="oneortwo">' +
-						'Main section content' +
-					'</div>' +
-					'<div id="sidebar">' +
-						'Sidebar content' +
-					'</div>'
+					'<table cellspacing="0" cellpadding="0" style="width:100%" border="0">' +
+						'<tr>' +
+							'<td style="width:50%">' +
+								'<h3>Title 1</h3>' +
+							'</td>' +
+							'<td></td>' +
+							'<td style="width:50%">' +
+								'<h3>Title 2</h3>' +
+							'</td>' +
+						'</tr>' +
+						'<tr>' +
+							'<td>' +
+								'Text 1' +
+							'</td>' +
+							'<td></td>' +
+							'<td>' +
+								'Text 2' +
+							'</td>' +
+						'</tr>' +
+					'</table>' +
+					'<p>' +
+						'More text goes here.' +
+					'</p>'
 			},
 			{
 				title: 'Text and Table',

@@ -567,17 +567,29 @@ body#bp #container #middlewrapper #gallery {
 body#bp #container #middlewrapper #gallery ul { list-style: none; }
 body#bp #container #middlewrapper #gallery ul li { display: inline; }
 body#bp #container #middlewrapper #gallery ul img {
-	border: 5px solid #3e3e3e;
-	border-width: 5px 5px 20px;
+	border: 2px solid #BBB;
+	/*border-width: 5px 5px 20px; */
 }
 body#bp #container #middlewrapper #gallery ul a:hover img {
-	border: 5px solid #fff;
-	border-width: 5px 5px 20px;
-	color: #fff;
+	/*border: 5px solid #fff;
+	border-width: 5px 5px 20px;  */
+	/*color: #fff; */
 }
 body#bp #container #middlewrapper #gallery ul a:hover { color: #fff; }
+body#bp #container #middlewrapper #gallery { background-color: #444; padding: 10px; width: 95%;  margin: auto; margin-bottom: 10px; margin-top:10px; }
+body#bp #container #middlewrapper #gallery ul { list-style: none; }
+body#bp #container #middlewrapper #gallery ul li { display: -moz-inline-box; -moz-box-orient: vertical; display: inline-block; vertical-align: middle; *vertical-align: auto; position: relative; }
+body#bp #container #middlewrapper #gallery ul li { *display: inline; }
+body#bp #container #middlewrapper #gallery ul li a { display: block; }
+body#bp #container #middlewrapper #gallery ul li #imageinfo .imagefont { text-align: center; color: white; width: 100px; line-height: 1.2em; }
 
-
+body#bp #container #middlewrapper #gallinks {width:920px; margin-left:15px; margin-top:8px; border: 1px solid #aaaaaa; background: transparent; -moz-border-radius: 5px; -webkit-border-radius: 5px; -o-border-radius: 5px; -ms-border-radius: 5px; -khtml-border-radius: 5px; border-radius: 5px; }
+body#bp #container #middlewrapper #gallinks ul { list-style-type: none; list-style-type: none; }
+body#bp #container #middlewrapper #gallinks ul, body#bp #container #middlewrapper #gallinks ul li { margin: 0px; padding: 0px; display: inline; }
+body#bp #container #middlewrapper #gallinks ul li { margin-right: 20px;}
+body#bp #container #middlewrapper #gallinks ul li a { text-decoration: none; color: #882200; }
+body#bp #container #middlewrapper #gallinks ul li a:hover { color: #555000;}
+body#bp #container #middlewrapper .backBox { color: #666666; margin-left: 20px; }
 
 .div.field, div.actions {
   margin-bottom: 10px;
@@ -645,4 +657,8 @@ margin-top:-6px; }
 	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
 	/* For IE 5.5 - 7 */
 	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
-}
+}  
+
+
+
+

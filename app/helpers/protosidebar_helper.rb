@@ -12,14 +12,14 @@ module ProtosidebarHelper
       if node.parent_id == parent_id
         ret += "<li>"
         ret += yield node 
-        galleries = Gallery.pagenumber(node.id)
-        if galleries != [] then 
-					ret+= "<ul>"
-        	galleries.each do |g|
-						 ret+="<li><a href= '/gallery/#{node.id}'>Gallery</a></li>" 
-	 				end       
-	        ret+= "</ul>"
-				end
+       # galleries = Gallery.pagenumber(node.id)
+       # if galleries != [] then 
+			 # 	ret+= "<ul>"
+       # 	galleries.each do |g|
+			 # 		 ret+="<li><a href= '/gallery/#{node.id}'>Gallery</a></li>" 
+	 		 # 	end       
+	     #   ret+= "</ul>"
+			 # end
         ret += display_tree_recursive(tree, node.id,x) { |n| yield n } unless node.children.empty?
         ret += "</li>"  
       end
@@ -48,5 +48,22 @@ module ProtosidebarHelper
       end
     end
     ret += "</ul>\n"
-  end
+  end   
+
+  def gallery_menu(pageid) 
+	 			ret = ""
+	 	  	galleries = Gallery.pagenumber(pageid)    
+	  			if galleries != [] then  
+	     		ret += "<div id='gallinks'>"
+	         ret += "<span>&nbsp;&nbsp;Galleries:  </span>"
+	 				ret+= "<ul id = 'Gallerylinks'>"
+	  				galleries.each do |g|
+	 					ret+="<li><a href= '/gallery_images/#{g.id}'>#{g.title}</a></li>"  
+	 				end       
+	    			ret+= "</ul></div" 
+	 	 		end   
+	 	    return ret
+	end
+
+
 end   

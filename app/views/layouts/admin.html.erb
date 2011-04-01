@@ -27,7 +27,7 @@
   </head>
   <body>
     <div id="container">
-			<% if user_signed_in? %>  
+			<% if logged_in? %>  
 	<div id = "navigation">  
 
 			<ul    id='topmenu' class='sf-menu'>
@@ -35,7 +35,7 @@
 				<li><%= link_to("Galleries admin", galleries_path) unless !Page.first %></li>  
 				<li><%= link_to("Images admin", images_path) unless !Page.first %></li> 
 			 <li><%= link_to("Contacts page", contact_index_path)%></li>
-			<li><%= link_to("Logout", destroy_user_session_path) %></a></li>
+			<li><%= link_to("Logout", logout_path) %></a></li>
 			</ul>
 		
 				<div class="clear">&nbsp;</div>

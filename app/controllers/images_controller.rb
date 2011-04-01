@@ -1,6 +1,7 @@
 class ImagesController < ApplicationController      
 	
       layout "admin" 
+ before_filter :login_required
   def index 
 		@images = Image.find(:all)
   end

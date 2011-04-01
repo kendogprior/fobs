@@ -4,17 +4,25 @@
       $('#gallery img').mouseover(function(){$(this).fadeTo('medium',0.5)}).mouseout(function(){$(this).fadeTo('fast',1)})
   });
   </script>
- 	
+	<%if session[:last_page]%>
+	        <%= link_to "Back", session[:last_page], :class => 'backBox' %>
+	<%end%> 	
 
-
+<% cache("gallery_#{@gallery.id}") do%>  
 <div id="gallery">  
-	    <ul>
-	     <% @gallery.images.each do |image| %> 
-	           <li>
-							<a href = "<%= image.photo.url(:medium) %>", title ="<%= image.description%>">
-									<img src="<%= image.photo.url(:thumb)%>" width="100" height="100" alt="<%= image.title%>" /> 
-								</a>
-						 </li>
-	      <% end %>   
-	    </ul>
-</div>
+			<div id="gallery">  
+				    <ul>
+				     <% @gallery.images.each do |image| %> 
+				           <li>
+										<a alt = "<%= image.title %>"  href = "<%= image.photo.url(:medium) %>" title ="<%= image.description %>">
+												<img src="<%= image.photo.url(:thumb)%>" width="100" height="100" alt="<%= image.title%>" /> 
+											</a><div id = "imageinfo">
+											<div class = "imagefont"><%= image.title %></div>
+											<div  class = "imagefont"><%= image.description %></div></div>
+									 </li>
+				      <% end %>   
+				    </ul>
+			</div> 
+</div> 
+
+<% end %>

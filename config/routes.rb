@@ -1,6 +1,12 @@
 Fobs::Application.routes.draw do
  
 
+  match 'logout' => 'sessions#destroy', :as => :logout
+
+  match 'login' => 'sessions#new', :as => :login
+
+  resources :sessions
+
   resources :contacts, :only => [:new, :create]
 
   get "admin/index"
@@ -10,9 +16,19 @@ Fobs::Application.routes.draw do
   resources :galleries 
   resources :images 
    match 'admin/gallery_images/(:id)' => 'galleries#edit_images', :as => :edit_gallery_images
+    
+  match 'user/edit' => 'users#edit', :as => :edit_user
 
+  match 'signup' => 'users#new', :as => :signup
+
+  match 'logout' => 'sessions#destroy', :as => :logout
+
+  match 'login' => 'sesions#new', :as => :login
  
-  devise_for :users
+  resources :user_sessions
+
+  resources :users
+  
 
   resources :pages    
   match 'admin/gallery' => 'galleries#index', :as => :admin_galleries
@@ -20,7 +36,7 @@ Fobs::Application.routes.draw do
   match 'admin/pages' => 'pages#index' ,:as => :admin_pages   
   match 'admin' => 'admin#index' ,:as => :admin      
   match '/(:pagename)' => 'viewer#show', :as => :pageshow , :defaults => {:pagename => 'Home'}   
-  match '/gallery/:gallery_id' => 'viewer#gallery', :as => :page_gallery  
+  match '/gallery_images/:gallery_id' => 'viewer#gallery', :as => :page_gallery  
   #the route below is special for the contacts page since the contact_us action does not have it's own view and requires form interaction via the contacts controller  
   match '/viewer/contact_us' => 'contacts#new'   
   match '/contact/index' => 'admin#contact_index', :as =>  :contact_index
@@ -85,5 +101,5 @@ Fobs::Application.routes.draw do
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-    match ':controller(/:action(/:id(.:format)))'
+    match ':controller(/:action(/:id(.:format)))' 
 end
