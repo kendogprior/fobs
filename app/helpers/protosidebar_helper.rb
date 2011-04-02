@@ -11,15 +11,7 @@ module ProtosidebarHelper
     tree.each do |node|
       if node.parent_id == parent_id
         ret += "<li>"
-        ret += yield node 
-       # galleries = Gallery.pagenumber(node.id)
-       # if galleries != [] then 
-			 # 	ret+= "<ul>"
-       # 	galleries.each do |g|
-			 # 		 ret+="<li><a href= '/gallery/#{node.id}'>Gallery</a></li>" 
-	 		 # 	end       
-	     #   ret+= "</ul>"
-			 # end
+        ret += yield node
         ret += display_tree_recursive(tree, node.id,x) { |n| yield n } unless node.children.empty?
         ret += "</li>"  
       end

@@ -30,7 +30,7 @@ Fobs::Application.routes.draw do
   resources :users
   
 
-  resources :pages    
+  resources :pages
   match 'admin/gallery' => 'galleries#index', :as => :admin_galleries
   match 'gallery/:gallery_id/images' => 'images#index' ,:as => :admin_images   
   match 'admin/pages' => 'pages#index' ,:as => :admin_pages   
@@ -38,7 +38,8 @@ Fobs::Application.routes.draw do
   match '/(:pagename)' => 'viewer#show', :as => :pageshow , :defaults => {:pagename => 'Home'}   
   match '/gallery_images/:gallery_id' => 'viewer#gallery', :as => :page_gallery  
   #the route below is special for the contacts page since the contact_us action does not have it's own view and requires form interaction via the contacts controller  
-  match '/viewer/contact_us' => 'contacts#new'   
+  match '/viewer/contact_us' => 'contacts#new', :as =>"contact"
+    match '/viewer/sitemap' => 'viewer#sitemap', :as =>"sitemap"
   match '/contact/index' => 'admin#contact_index', :as =>  :contact_index
   match '/contact/show/(:id)' => 'admin#contact_show', :as => :contact_show
   match '/contact/delete/(:id)' => 'admin#contact_destroy', :as => :contact_delete

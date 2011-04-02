@@ -40,7 +40,7 @@
 					<% end %> 
 				</div>
 			</div>
-	 
+
 			<div id="middlewrapper">
 				<%= yield %>
 				<div style="clear:both; height:0">
@@ -48,7 +48,10 @@
 				</div>
 			</div>
 			<div id="footer">
-				Navigation and other details
+
+
+                <%= link_to "Site Map", sitemap_path %>&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to "Contact", contact_path %>
+
 			</div>
 		</div>
 		<div id = "bs">&nbsp;</div>

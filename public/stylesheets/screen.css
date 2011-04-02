@@ -557,7 +557,18 @@ body#bp #container #footer {
   background: #Bdd2FF;
   width:950px;
   text-align: center;
-} 
+}
+
+body#bp #container #footer a
+{
+
+    text-decoration: none;
+    color: #666666;
+}
+
+body#bp #container #footer  a:hover {
+    color: #000000;
+}
 
 body#bp #container #middlewrapper #gallery {
 	background-color: #444;
