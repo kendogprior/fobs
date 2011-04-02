@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="196bccff-7a37-4e76-80f5-ef183a46a1e6" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/layouts/protosidebar.html" afterPath="$PROJECT_DIR$/app/views/layouts/protosidebar.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/protosidebar_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/protosidebar_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/screen.css" afterPath="$PROJECT_DIR$/public/stylesheets/screen.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/layout_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/layout_helper.rb" />
     </list>
     <ignored path="fobs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,10 +54,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="viewer_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="viewer_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/viewer_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="19" selection-start="279" selection-end="279" vertical-scroll-proportion="0.3207547">
+            <state line="10" column="19" selection-start="279" selection-end="279" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="error_messages_helper.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/helpers/error_messages_helper.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout_helper.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/helpers/layout_helper.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="4" selection-start="644" selection-end="644" vertical-scroll-proportion="0.83396226">
               <folding />
             </state>
           </provider>
@@ -96,6 +111,7 @@
         <option value="$PROJECT_DIR$/app/views/layouts/protosidebar.html.erb" />
         <option value="$PROJECT_DIR$/public/stylesheets/screen.css" />
         <option value="$PROJECT_DIR$/app/helpers/protosidebar_helper.rb" />
+        <option value="$PROJECT_DIR$/app/helpers/layout_helper.rb" />
       </list>
     </option>
   </component>
@@ -534,16 +550,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/pagelayout.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/user_mailer/forward_email.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="20" selection-start="309" selection-end="309" vertical-scroll-proportion="-0.65384614">
@@ -631,7 +637,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/viewer_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="19" selection-start="279" selection-end="279" vertical-scroll-proportion="0.3207547">
+        <state line="10" column="19" selection-start="279" selection-end="279" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/error_messages_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/layout_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="4" selection-start="644" selection-end="644" vertical-scroll-proportion="0.83396226">
           <folding />
         </state>
       </provider>
