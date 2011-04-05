@@ -3,22 +3,22 @@
 # to do so you may need to add this line to your ApplicationController
 #   helper :layout
 module LayoutHelper
-  def title(page_title, show_title = true)  
-	 @show_title = show_title
-	if show_title
-    content_for(:title) { page_title.to_s } 
-   end
-    
+  def title(page_title, show_title = true)
+    @show_title = show_title
+    if show_title
+      content_for(:title) { page_title.to_s }
+    end
+
   end
-  
+
   def show_title?
     @show_title
   end
-  
+
   def stylesheet(*args)
     content_for(:head) { stylesheet_link_tag(*args) }
   end
-  
+
   def javascript(*args)
     content_for(:head) { javascript_include_tag(*args) }
   end

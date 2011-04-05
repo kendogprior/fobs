@@ -371,7 +371,7 @@ caption {
 .last, div.last {
   margin-right: 0;
 }
- 
+
 
 body#bp {
   background-color: #6280a4;
@@ -379,18 +379,18 @@ body#bp {
 }
 
 
-/* line 21, ../src/screen.scss */ 
+/* line 21, ../src/screen.scss */
 /*
 body#bp #container {
   width: 964px;
-  margin: 0 auto;  
-   background-image: url("/images/midshad.png"); 
+  margin: 0 auto;
+   background-image: url("/images/midshad.png");
    background-repeat: repeat-y;
-  background-position: top right;   
+  background-position: top right;
   *zoom: 1;
   margin-top: 2em;
-}  
- */  
+}
+ */
 body#bp #container{width:950px;margin: 0 auto;  margin-top: 2em;}
 
 body#bp #container #headbox{
@@ -434,26 +434,26 @@ body#bp #container #headbox #navigation ul#topmenu {
 body#bp #container #middlewrapper {
   background: #dff4ff;
   width: 950px;
-  /* margin: 0 auto;  */ 
- overflow: hidden;  
+  /* margin: 0 auto;  */
+ overflow: hidden;
   *zoom: 1;
-}  
+}
 
 body#bp #container #middlewrapper ul.sitemenu *{
-	 /*list-style: none; */ 
-	
-}                     
+	 /*list-style: none; */
+
+}
 
 
 
 /*body#bp #container #middlewrapper ul.sitemenu  li {margin-top:4px; padding:3px 0px 3px 10px;}
 body#bp #container #middlewrapper ul.sitemenu  li a{text-decoration:none; font-size:1.5em;}   
-*/   
+*/
 
 #sitemapwrap{
- 
+
   border-width:5px;
- border-style:ridge; 
+ border-style:ridge;
 
 border-color:#973335;
 	width:600px;
@@ -464,7 +464,7 @@ border-color:#973335;
 .sitemenu li a {    display: block; padding: 4px 8px; text-decoration: none; color: black; }
 /*.sitemenu li a:hover { color: white; background-color: #4A63B8; }*/
 .sitemenu li a:hover { color: #C00;  }
-                                         
+
 
 
 
@@ -475,17 +475,17 @@ border-color:#973335;
 body#bp #container #middlewrapper #content {
   margin-top: 0em;
    /*  display:inline;
-float: left; */   
-  padding:10px 16px 0px 16px; 
-  background: #dff4ff;   
+float: left; */
+  padding:10px 16px 0px 16px;
+  background: #dff4ff;
   width:940px;
-} 
+}
 
 #content .form{
 	color:#973335;
 	font-family:Helvetica,Arial,sans-serif;
 	font-size:1.5em;
- 
+
 }
 /* line 77, ../src/screen.scss */
 body#bp #container #middlewrapper #content img {
@@ -493,7 +493,7 @@ body#bp #container #middlewrapper #content img {
   margin: 5px 10px  0px 0px;
   border: 1px solid black;
   padding: 3px;
-}  
+}
 body#bp #container #middlewrapper #oneortwo img {
   float: left;
   margin: 5px 10px  0px 0px;
@@ -505,31 +505,31 @@ body#bp #container #middlewrapper #oneortwo img {
 body#bp #container #middlewrapper #content p {
 
   font-size: 10pt;
-  color: #888; 
-/*   margin-left:18px; */ 
-   
+  color: #888;
+/*   margin-left:18px; */
+
 }
 /* line 93, ../src/screen.scss */
 body#bp #container #middlewrapper #oneortwo {
   margin-top: 0em;
    display:inline;
-  float: left;    
-  padding:10px 16px 0px 16px; 
+  float: left;
+  padding:10px 16px 0px 16px;
   background: #dff4ff;
 
   width: 770px;
-}    
+}
 
 body#bp #container #middlewrapper #content ul{
 	list-style:none;
 
-	}  
+	}
 
 body#bp #container #middlewrapper #content  ul li {margin-top:10px; width:150px;}
-body#bp #container #middlewrapper	 #content ul li a { display: block; padding: 4px 8px; text-decoration: none; border: solid 1px black; color: black; background-color: #AEBBE2;}   
+body#bp #container #middlewrapper	 #content ul li a { display: block; padding: 4px 8px; text-decoration: none; border: solid 1px black; color: black; background-color: #AEBBE2;}
 body#bp #container #middlewrapper	 #content ul li a:hover { color: white; background-color: #4A63B8; }
 
-* line 139, ../../../../.rvm/gems/ruby-1.9.2-p0/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+/* line 139, ../../../../.rvm/gems/ruby-1.9.2-p0/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html body#bp #container #middlewrapper .oneortwo {
   overflow-x: hidden;
 }
@@ -566,7 +566,7 @@ body#bp #container #footer a
     color: #666666;
 }
 
-body#bp #container #footer  a:hover {
+body#bp #container #footera:hover {
     color: #000000;
 }
 
@@ -647,7 +647,7 @@ body#bp #container #middlewrapper .backBox { color: #666666; margin-left: 20px; 
 
 .error_messages ul {
   margin: 0;
-} 
+}
 /*
 #bs{
 	width: 964px;
@@ -656,7 +656,7 @@ background-image:url("/images/bottshad.png");
 background-repeat:no-repeat;
 background-position: right top;
 height:14px;
-margin-top:-6px; }    
+margin-top:-6px; }
  */
 
 

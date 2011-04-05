@@ -7,13 +7,13 @@ class GalleriesController < ApplicationController
   end
   
   def show
-    @gallery = Gallery.find(params[:id])  
-   @images =  @gallery.images   
+    @gallery = Gallery.find(params[:id])
+    @images =  @gallery.images
   end
-  
+
   def new
     @gallery = Gallery.new 
-    @images = Image.find(:all)
+    @images = Image.all
   end
   
   def create
@@ -29,7 +29,7 @@ class GalleriesController < ApplicationController
   
   def edit
     @gallery = Gallery.find(params[:id]) 
-    @images = Image.find(:all)
+    @images = Image.all
   end
   
   def update
