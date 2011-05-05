@@ -14,6 +14,8 @@ gem 'ckeditor', '3.5.2'
 
 gem 'mysql2'
 
+gem 'carmen'    #generates a countries selection list
+
   
 
 

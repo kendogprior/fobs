@@ -1,0 +1,25 @@
+one:
+  name: MyString
+  street: MyString
+  town: MyString
+  country: MyString
+  postcode: MyString
+  telenum: MyString
+  email: MyString
+  datejoin: 2011-04-05
+  datepaid: 2011-04-05
+  membertype: MyString
+  amountpaid: MyString
+
+two:
+  name: MyString
+  street: MyString
+  town: MyString
+  country: MyString
+  postcode: MyString
+  telenum: MyString
+  email: MyString
+  datejoin: 2011-04-05
+  datepaid: 2011-04-05
+  membertype: MyString
+  amountpaid: MyString

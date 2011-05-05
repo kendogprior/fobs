@@ -30,4 +30,14 @@ class ViewerController < ApplicationController
   def contact_us
     @pagetitle = "Contact Us"
   end
+
+  #def membership_form
+  #   @pagetitle = "New members form"
+  #end
+
+  def newmember
+    @pagetitle = "Joining the  Society"
+  end
+
+
 end

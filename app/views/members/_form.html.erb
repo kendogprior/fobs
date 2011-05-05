@@ -1,0 +1,39 @@
+<%= form_for @member do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :street %><br />
+    <%= f.text_field :street %>
+  </p>
+  <p>
+    <%= f.label :town %><br />
+    <%= f.text_field :town %>
+  </p>
+  <p>
+    <%= f.label :country %> (Please select your country)<br />
+    <%=  f.select :country, @countries%>
+  </p>
+  <p>
+    <%= f.label :postcode %><br />
+    <%= f.text_field :postcode %>
+  </p>
+  <p>
+    <%= f.label :telenum %><br />
+    <%= f.text_field :telenum %>
+  </p>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+
+
+  <p>
+    <%= f.label :membertype %><br />
+    <%= f.text_field :membertype %>
+  </p>
+  <p>
+  <p><%= f.submit %></p>
+<% end %>
