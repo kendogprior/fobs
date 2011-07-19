@@ -99,7 +99,7 @@ list-style:none;
 .editmenu{list-style: none;}   
 .editmenu li{margin: 15px 0px 5px 0px; font-size:10pt;}   
 .editmenu li a{font-size:8pt; }   
-.
+#container  #error_explanation ul li{float:none;}
 /*
 #topmenu *{list-style: none;} 
 #topmenu li {margin: 5px 0px 5px 0px;} 

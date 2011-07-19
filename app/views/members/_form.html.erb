@@ -1,16 +1,32 @@
+<h3 class = "form">
+Join the Friends of the
+						O.R.P. Błyskawica
+						Society
+</h3>
+  <div> The fields marked <span class="red">*</span> are required fields</div>
 <%= form_for @member do |f| %>
-  <%= f.error_messages %>
+  <% if @member.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@member.errors.count, "error") %> prohibited this contact from being saved:</h2>
+
+      <ul>
+      <% @member.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
   <p>
     <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :size => 30 %><span class="red">*</span>
   </p>
   <p>
     <%= f.label :street %><br />
-    <%= f.text_field :street %>
+    <%= f.text_field :street,:size => 35 %><span class="red">*</span>
   </p>
   <p>
     <%= f.label :town %><br />
-    <%= f.text_field :town %>
+    <%= f.text_field :town,:size => 30 %><span class="red">*</span>
   </p>
   <p>
     <%= f.label :country %> (Please select your country)<br />
@@ -18,22 +34,24 @@
   </p>
   <p>
     <%= f.label :postcode %><br />
-    <%= f.text_field :postcode %>
+    <%= f.text_field :postcode %><span class="red">*</span>
   </p>
   <p>
-    <%= f.label :telenum %><br />
+    <%= f.label "Telephone number" %><br />
     <%= f.text_field :telenum %>
   </p>
   <p>
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
+    <%= f.label "Email address" %><br />
+    <%= f.text_field :email %><span class="red">*</span>
   </p>
 
 
   <p>
-    <%= f.label :membertype %><br />
-    <%= f.text_field :membertype %>
+    <%= f.label "Type of membership" %><span class="red">*</span><br />
+    <%= f.radio_button :membertype,"Individual"%> Individual - £5.00<br>
+    <%= f.radio_button :membertype,"Family" %> Family - £10.00<br>
+    <%= f.radio_button :membertype,"Corporate" %> Corporate - £50.00<br>
   </p>
   <p>
-  <p><%= f.submit %></p>
+  <p><%= f.submit "Send application"%></p>
 <% end %>

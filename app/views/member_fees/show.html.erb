@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+   <%= debug params[:member_fee] %>
+<p>
+  <b>Member type:</b>
+  <%= @member_fee.member_type %>
+</p>
+
+<p>
+  <b>Fee:</b>
+  <%= @member_fee.fee %>
+</p>
+
+
+<%= link_to 'Edit', edit_member_fee_path(@member_fee) %> |
+<%= link_to 'Back', member_fees_path %>

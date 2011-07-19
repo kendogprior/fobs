@@ -1,8 +1,9 @@
 <% title "Edit Member" %>
 
 <%= render 'form' %>
-
+<% if logged_in? %>
 <p>
   <%= link_to "Show", @member %> |
   <%= link_to "View All", members_path %>
 </p>
+<% end %>

@@ -1,3 +1,15 @@
 <%= title @page.name %>
-<%= gallery_menu(@page.id).html_safe   %> 
-<%= @page.content.html_safe %>
+<%#= render :partial => 'galleries', :locals => {:page => @page}  %>
+<div id = "content">
+<% if @page.sidebar =~ /\w+/ %>
+    <div id="leftside">
+      <%= @page.content.html_safe %>
+    </div>
+    <div id="rightside">
+      <%= @page.sidebar.html_safe %>
+    </div>
+<% else %>
+    <%= @page.content.html_safe %>
+<% end %>
+<div style = {clear:both;height:0px;} >&nbsp;</div>
+</div>

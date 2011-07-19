@@ -1,0 +1,23 @@
+<h1>Listing emailcontacts</h1>
+
+<table>
+  <tr>
+    <th>Emailaddress</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @emailcontacts.each do |emailcontact| %>
+  <tr>
+    <td><%= emailcontact.emailaddress %></td>
+    <td><%= link_to 'Show', emailcontact %></td>
+    <td><%= link_to 'Edit', edit_emailcontact_path(emailcontact) %></td>
+    <td><%= link_to 'Destroy', emailcontact, :confirm => 'Are you sure?', :method => :delete unless emailcontact%></td>
+    <td><%= link_to 'Destroy', emailcontact, :confirm => 'Are you sure?', :method => :delete%></td>
+  </tr>
+<% end %>
+</table>
+<%= link_to 'New email contact', new_emailcontact_path unless @emailcontacts ==[] %>
+
+

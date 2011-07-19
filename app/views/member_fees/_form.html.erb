@@ -1,0 +1,27 @@
+<%= form_for(@member_fee) do |f| %>
+  <% if @member_fee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@member_fee.errors.count, "error") %> prohibited this member_fee from being saved:</h2>
+
+      <ul>
+      <% @member_fee.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :member_type %><br />
+    <%#= f.text_field :member_type %>
+    <%= select :member_fee, :member_type , [['Individual','Individual'],['Family','Family'],['Corporate','Corporate']]%>
+
+  </div>
+  <div class="field">
+    <%= f.label :fee %><br />
+    <%= f.text_field :fee %>(input fee as a whole number of PENCE)
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -29,9 +29,9 @@ module ProtosidebarHelper
         ret += yield node
         galleries = Gallery.pagenumber(node.id)
         if galleries != [] then
-          ret+= "<ul>"
+          ret+= "<ul class = 'sitemenu'>"
           galleries.each do |g|
-            ret+="<li><a href= '/gallery_images/#{g.id}'>#{g.title}</a></li>"
+            ret+="<li><a href= '/gallery_images/#{g.id}'>Gallery: #{g.title}</a></li>"
           end
           ret+= "</ul>"
         end
@@ -47,12 +47,12 @@ module ProtosidebarHelper
     galleries = Gallery.pagenumber(pageid)
     if galleries != [] then
       ret += "<div id='gallinks'>"
-      ret += "<span>&nbsp;&nbsp;Galleries:  </span>"
+      ret += "<div style = 'float:left;'>&nbsp;&nbsp;Galleries:  </div>"
       ret+= "<ul id = 'Gallerylinks'>"
       galleries.each do |g|
         ret+="<li><a href= '/gallery_images/#{g.id}'>#{g.title}</a></li>"
       end
-      ret+= "</ul></div"
+      ret+= "</ul><div style = {clear:both;height:0px;} >&nbsp;</div></div"
     end
     return ret
   end

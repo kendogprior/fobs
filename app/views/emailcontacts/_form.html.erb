@@ -1,0 +1,21 @@
+<%= form_for(@emailcontact) do |f| %>
+  <% if @emailcontact.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@emailcontact.errors.count, "error") %> prohibited this emailcontact from being saved:</h2>
+
+      <ul>
+      <% @emailcontact.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :emailaddress %><br />
+    <%= f.text_field :emailaddress %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

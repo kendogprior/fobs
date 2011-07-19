@@ -1,0 +1,13 @@
+
+    <%# @galleries = Gallery.pagenumber(page.id) %>
+     <% if @galleries != [] then %>
+    <div id='gallinks'>
+      <div id = "gtitle">&nbsp;&nbsp;Galleries:</div>
+      <ul id='Gallerylinks'>
+        <% @galleries.each do |g| %>
+            <li><a href='/gallery_images/<%= g.id %>'><%= g.title %></a></li>
+        <% end %>
+      </ul>
+      <div style={clear:both;height:0px;}>&nbsp;</div>
+    </div>
+<% end %>

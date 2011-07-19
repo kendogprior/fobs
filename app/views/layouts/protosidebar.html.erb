@@ -9,11 +9,13 @@
 		<script type="text/javascript">
 //<![CDATA[
 			// initialise plugins
-			jQuery(function(){
+$(document).ready((function(){
 				jQuery('ul.sf-menu').superfish({
-					pathClass: 'current', speed: 'fast'
+					pathClass: 'current', speed: 'slow'
 					});  
-			});  
+			})
+           );
+
 		//]]>
 		</script><!--[if lt IE 8]>    
 			<link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -42,16 +44,17 @@
 			</div>
 
 			<div id="middlewrapper">
+              <% if @galleries %>
+                <%= render :partial => 'galleries', :locals => {:page => @page}  %>
+              <% end %>
               <div id = "content">
 				<%= yield %>
-				<div style="clear:both; height:0">
+				<!--div style="clear:both; height:0">
 					&nbsp;
-				</div>
+				</div-->
                 </div>
 			</div>
 			<div id="footer">
-
-
                 <%= link_to "Site Map", sitemap_path %>&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to "Contact", contact_path %>
 
 			</div>

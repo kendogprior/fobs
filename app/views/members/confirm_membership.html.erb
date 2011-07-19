@@ -1,0 +1,45 @@
+<h4>Please check your details before proceeding</h4>
+
+ <div class = "details">
+   <div id = "pay">
+     <p>Please follow the link for secure payment:</p>
+
+   </div>
+<p>
+  <strong>Name:</strong>
+  <span class = "attrib"><%= @member.name %></span>
+</p>
+<p>
+  <strong>Street:</strong>
+  <span class = "attrib"><%= @member.street %></span>
+</p>
+<p>
+  <strong>Town:</strong>
+  <span class = "attrib"><%= @member.town %></span>
+</p>
+<p>
+  <strong>Country:</strong>
+  <span class = "attrib"><%= @member.country %></span>
+</p>
+<p>
+  <strong>Post code:</strong>
+  <span class = "attrib"><%= @member.postcode %></span>
+</p>
+<p>
+  <strong>Telephone:</strong>
+  <span class = "attrib"><%= @member.telenum %></span>
+</p>
+<p>
+  <strong>Email:</strong>
+  <span class = "attrib"><%= @member.email %></span>
+</p>
+<p>
+  <strong>Member type:</strong>
+  <span class = "attrib"><%= @member.membertype %></span>
+</p>
+<p>
+  <strong>Amount:</strong>
+  <span class = "attrib"><%= @member.amountpaid %></span>
+</p>
+<p><%= link_to "Edit details", edit_membership_path(@member)%></p>
+</div>

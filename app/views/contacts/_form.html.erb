@@ -1,11 +1,10 @@
 <div id = "content">
 	<h3 class = "form">
-Please use this form to contact the Friends of the<br />
-						O.R.P. Błyskawica<br />
+Contact the Friends of the
+						O.R.P. Błyskawica
 						Society    
 </h3>
-<p> The fields marked <span class="red">*</span> are required fields<p>
-
+  <div> The fields marked <span class="red">*</span> are required fields</div>
 <%= form_for(@contact) do |f| %>
   <% if @contact.errors.any? %>
     <div id="error_explanation">
@@ -21,11 +20,11 @@ Please use this form to contact the Friends of the<br />
 
   <div class="field">
     <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.text_field :name %><span class="red">*</span>
   </div>
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.text_field :email %><span class="red">*</span> 
+    <%= f.text_field :email %><span class="red">*</span>
   </div>
   <div class="field">
     <%= f.label :telephone %><br />
@@ -33,12 +32,11 @@ Please use this form to contact the Friends of the<br />
   </div>
   <div class="field">
     <%= f.label :message %><br />
-    <%= f.text_area :message %><span class="red">*</span> 
-  </div>  
+    <%= f.text_area :message %><span class="red">*</span>
+  </div>
 
   <div class="actions">
     <%= f.submit "Send message"  %>
   </div>
 <% end %>
-<br/><br/> <br/>
   </div>

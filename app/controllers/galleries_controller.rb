@@ -35,6 +35,7 @@ class GalleriesController < ApplicationController
   def update
     @gallery = Gallery.find(params[:id])   
       @gallery.images = Image.find(params[:image_ids]) if params[:image_ids]
+    @images = Image.all
     if @gallery.update_attributes(params[:gallery])
       flash[:notice] = "Successfully updated gallery."
       redirect_to @gallery
@@ -48,11 +49,10 @@ class GalleriesController < ApplicationController
     @gallery.destroy
     flash[:notice] = "Successfully destroyed gallery."
     redirect_to galleries_url 
-
+   end
 		private
 			def sweep
 				expire_fragment(:topmenu)    
 		    expire_fragment(:sitemap)
 			end
-  end
 end

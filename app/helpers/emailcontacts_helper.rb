@@ -1,0 +1,2 @@
+module EmailcontactsHelper
+end

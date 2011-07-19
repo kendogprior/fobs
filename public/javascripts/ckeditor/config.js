@@ -28,11 +28,11 @@ CKEDITOR.editorConfig = function( config )
   
   config.toolbar_Easy =
     [
-        ['Source','-','Preview','Templates'],
-        ['Cut','Copy','Paste','PasteText','PasteFromWord',],
-        ['Maximize','-','About'],
+
+        ['Cut','Copy','Paste','PasteText','PasteFromWord'],
+        ['Maximize'],
         ['Undo','Redo','-','Find','Replace','-','SelectAll','RemoveFormat'],
-        ['Styles','Format'],
+        ['Styles','Format','Font','FontSize'],
         ['Bold','Italic','Underline','Strike','-','Subscript','Superscript', 'TextColor'],
         ['NumberedList','BulletedList','-','Outdent','Indent','Blockquote'],
         ['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],

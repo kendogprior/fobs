@@ -1,0 +1,13 @@
+<% title "Edit Sidebar" %>
+
+<%= form_for(@page_sidebar, :url => update_sidebar_path) do |f| %>
+    <%= f.error_messages %>
+    <p>
+      <%= f.label :sidebar %><br/>
+      <%= f.cktext_area :sidebar, :toolbar=>'Easy', :width=>'250px', :height=>'400px' %>
+    </p>
+
+
+    <p><%= f.submit %></p>
+<% end %>
+

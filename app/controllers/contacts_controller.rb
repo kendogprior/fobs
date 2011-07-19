@@ -13,9 +13,11 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(params[:contact])
+    @pagetitle = "Contact"
     respond_to do |format|
       if @contact.save
-        recipient = "brian.on.iow@gmail.com"
+        #recipient = "brian.on.iow@gmail.com"
+        recipient = Emailcontact.first.emailaddress
         UserMailer.forward_email(@contact, recipient).deliver
         format.html { redirect_to(root_path, :notice => 'Message sent') }
       else
@@ -23,4 +25,8 @@ class ContactsController < ApplicationController
       end
     end
   end
+
+
+
+
 end
