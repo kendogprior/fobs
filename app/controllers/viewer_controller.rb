@@ -30,6 +30,7 @@ class ViewerController < ApplicationController
     @pagetitle = @gallery.title
   end
 
+
   #def contact_us
   #  @pagetitle = "Contact Us"
   #end
@@ -42,5 +43,8 @@ class ViewerController < ApplicationController
   #  @pagetitle = "Joining the  Society"
   #end
 
+  def membership
+       @pagetitle = "Membership"
+  end
 
 end

@@ -54,9 +54,9 @@ Fobs::Application.routes.draw do
   match '/contact/index' => 'admin#contact_index', :as => :contact_index
   match '/contact/show/(:id)' => 'admin#contact_show', :as => :contact_show
   match '/contact/delete/(:id)' => 'admin#contact_destroy', :as => :contact_delete
-  match '/viewer/membership_form' => 'members#new', :as => :new_member
-  match '/membership/edit_details/(:id)' => 'members#edit', :as => :edit_membership
-  match '/membership/confirm_details/:id' => 'members#confirm_membership', :as => :confirm_membership
+  #match '/viewer/membership_form' => 'members#new', :as => :new_member
+  #match '/membership/edit_details/(:id)' => 'members#edit', :as => :edit_membership
+  #match '/membership/confirm_details/:id' => 'members#confirm_membership', :as => :confirm_membership
 
   root :to => 'viewer#show', :defaults => {:pagename => 'Home'}
 
