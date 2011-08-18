@@ -4,7 +4,15 @@ gem 'rails', '3.0.5'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3-ruby', :require => 'sqlite3'
+#group :production do
+#  gem 'pg'
+#end
+
+group :development, :test do
+  #gem 'sqlite3-ruby', :require => 'sqlite3'
+  gem 'mysql2'
+end
+
 gem "nifty-generators"
 
 #gem 'authlogic'  
@@ -12,7 +20,7 @@ gem 'acts_as_tree'
 gem 'paperclip' 
 gem 'ckeditor', '3.5.2'
 
-gem 'mysql2'
+#gem 'mysql2'
 
 gem 'carmen'    #generates a countries selection list
 

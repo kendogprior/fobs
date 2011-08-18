@@ -4,7 +4,9 @@ log/*.log
 tmp/**/*
 _DS.Store
 public/system/*
-.idea
+.idea/*
 database.yml
+.gitignore
+           
 
 
