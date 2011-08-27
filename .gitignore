@@ -5,7 +5,7 @@ tmp/**/*
 _DS.Store
 public/system/*
 .idea/*
-database.yml
+#database.yml
 .gitignore
            
 
