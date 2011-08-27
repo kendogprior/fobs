@@ -1,6 +1,6 @@
-<%= title @page.name %>
+<%#= title @page.name %>
 <%#= render :partial => 'galleries', :locals => {:page => @page}  %>
-<div id = "content">
+
 <% if @page.sidebar =~ /\w+/ %>
     <div id="leftside">
       <%= @page.content.html_safe %>
@@ -12,4 +12,3 @@
     <%= @page.content.html_safe %>
 <% end %>
 <div style = {clear:both;height:0px;} >&nbsp;</div>
-</div>

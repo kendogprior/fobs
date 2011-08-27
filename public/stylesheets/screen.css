@@ -456,12 +456,12 @@ body#bp #container #middlewrapper {
 }
 
 .sitemenu  {
-list-style: none;
-
+    list-style: none;
     margin-left: 20px;
     padding: 0;
     width: 200px;
-    font-family: Helvetica, Arial, sans-serif;
+
+    /*font-family: Helvetica, Arial, sans-serif;*/
     font-size: 10pt;
 
 }
@@ -477,16 +477,11 @@ body#bp #container #middlewrapper ul.sitemenu  li a{text-decoration:none; font-s
     border-color: #973335;
     width: 600px;
     margin: 1em auto 1em;
+
 }
 
-/*.sitemenu  {
-    list-style:none;
-    margin-left: 20px;
-    padding: 0;
-    width: 200px;
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 12pt;
-}  */
+#sitemapwrap h3{ margin-left: 40px; color: #4169e1;margin-top: 5px;}
+#sitemapwrap ul{ margin-left: 40px;}
 
 /*.sitemenu li a { display: block; padding: 4px 8px; text-decoration: none; border: solid 1px black; color: black; background-color: #AEBBE2; }    */
 .sitemenu li a {
@@ -494,6 +489,9 @@ body#bp #container #middlewrapper ul.sitemenu  li a{text-decoration:none; font-s
     padding: 2px 4px;
     text-decoration: none;
     color: black;
+    font-family: Helvetica, Arial, sans-serif;
+  font-style: italic;
+
 }
 
 /*.sitemenu li a:hover { color: white; background-color: #4A63B8; }*/
@@ -512,7 +510,7 @@ body#bp #container #middlewrapper #content {
   float: left; */
     padding: 10px 16px 0px 16px;
     background: #dff4ff;
-    width: 940px;
+    width: 918px;
 }
 
 #content .form {

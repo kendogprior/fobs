@@ -47,11 +47,8 @@ $(document).ready((function(){
               <% if @galleries %>
                 <%= render :partial => 'galleries', :locals => {:page => @page}  %>
               <% end %>
-              <div id = "content">
+              <div id = "content" class = "any">
 				<%= yield %>
-				<!--div style="clear:both; height:0">
-					&nbsp;
-				</div-->
                 </div>
 			</div>
 			<div id="footer">
