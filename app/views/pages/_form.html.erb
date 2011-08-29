@@ -29,7 +29,7 @@
   </p>
 
     <p>
-	 <%= link_to "Edit sidebar", :sidebar_edit ,:style => 'color:red;font-weight:bold' unless @page.id.nil?%>
+	 <%= link_to "Edit sidebar",  sidebar_edit_path(@page) ,:style => 'color:red;font-weight:bold' unless @page.id.nil?%>
   </p>
 	<p>
     <%= f.label :redirect %><br />

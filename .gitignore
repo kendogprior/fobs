@@ -4,6 +4,7 @@ log/*.log
 tmp/**/*
 _DS.Store
 public/system/*
+public/ckeditor/*
 .idea/*
 #database.yml
 .gitignore
