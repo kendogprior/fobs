@@ -1,7 +1,6 @@
 class Gallery < ActiveRecord::Base
   belongs_to :page
-   has_and_belongs_to_many :images 
-
+   has_and_belongs_to_many :images
   attr_accessible :page_id, :title
    validates_presence_of :title,  :message => "can't be blank"
    #validates_numericality_of :page_id,  :message => "not selected"
