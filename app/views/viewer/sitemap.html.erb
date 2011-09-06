@@ -1,5 +1,7 @@
 
  <div id = "sitemapwrap">
    <h3>Site map</h3>
-   <%= sitemenu(@tree, nil, false) { |node| link_to(node.name, pageshow_path(node.name))}.html_safe %>
- </div>
+   <% cache("sitemap") do %>
+      <%= sitemenu(@tree, nil, false) { |node| link_to(node.name, pageshow_path(node.name))}.html_safe %>
+   <% end %>
+     </div>

@@ -50,7 +50,7 @@ class PagesController < ApplicationController
 
 	private
 		def sweep
-			expire_fragment(:topmenu)    
+		expire_fragment(:topmenu)
 	    expire_fragment(:sitemap)
 		end
 end
